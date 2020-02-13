@@ -49,8 +49,7 @@ function createMenu (array){
     listItem.textContent += item;
   })
   
-  
-  // Setup structure of elements
+
 
 
   menu.appendChild(menuList);
@@ -60,11 +59,11 @@ function createMenu (array){
 
   menu.classList.add('menu');
 
-  //Set text content
+
 
   // button events
 
-  
+
   let menuBtn = document.querySelector('img')
   console.log(menuBtn)
   menuBtn.addEventListener('click', event =>{

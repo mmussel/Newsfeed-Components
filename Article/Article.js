@@ -114,15 +114,15 @@ const data = [
 */
 const articles = document.querySelector('.articles')
 data.map(data => {
-  console.log('creating article', data.date)
+  // console.log('creating article', data.date)
   return articles.appendChild(createArticle(data.title, data.date, data.firstParagraph,
     data.secondParagraph, data.thirdParagraph));
 })
-articles.appendChild(createArticle('a','b', 'c', 'd', 'e' ))
+articles.appendChild(createArticle('one','two', 'three', 'four', 'five' ))
 function createArticle(title, date, firstParagraph, secondParagraph, thirdParagraph){
 
-  
-  //define elements
+
+
 
 
   const article = document.createElement('div');
@@ -134,7 +134,7 @@ function createArticle(title, date, firstParagraph, secondParagraph, thirdParagr
   const button = document.createElement('span');
 
 
-  // Setup structure of elements
+  
 
 
   article.appendChild(header);
@@ -173,3 +173,8 @@ function createArticle(title, date, firstParagraph, secondParagraph, thirdParagr
 
   return article;
 }
+const addedArticle = document.querySelector('.articles');
+data.map( el => {
+  addedArticle.appendChild(createElements(el));
+
+})
